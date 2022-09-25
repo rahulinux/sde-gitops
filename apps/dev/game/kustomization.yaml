@@ -1,0 +1,8 @@
+bases:
+  - ../../base/game/
+
+patches:
+  - target:
+      kind: Ingress
+      name: game
+    path: ingress-patch.yaml

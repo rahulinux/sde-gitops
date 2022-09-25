@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: game-2048
+spec:
+  source:
+    path: apps/dev/game
+    repoURL: "https://github.com/rahulinux/sde-gitops"
+    targetRevision: main
+  destination:
+    namespace: "game"
+    server: "https://kubernetes.default.svc"
+  project: default
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true

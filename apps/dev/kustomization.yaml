@@ -16,3 +16,4 @@ patches:
 
 resources:
   - kube-ops-view/application.yaml
+  - game/application.yaml
