@@ -1,0 +1,8 @@
+bases:
+  - ../../base/kube-ops-view/
+
+patches:
+  - target:
+      kind: Ingress
+      name: kube-ops-view
+    path: ingress-patch.yaml
